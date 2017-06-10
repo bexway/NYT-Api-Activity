@@ -1,6 +1,6 @@
 var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 url += '?' + $.param({
-//  'api-key': ,
+  'api-key': my_key,
 });
 
 $.ajax({
