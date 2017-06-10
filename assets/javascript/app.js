@@ -29,8 +29,14 @@ $("#submit").on("click", function(event) {
     method: 'GET',
   }).done(function(result) {
     //go through searchRecords to display top content
+    var articleDiv = $('.js-articleholder');
     for (var i=0; i < Math.min(searchRecords, result.response.docs.length); i++){
       console.log(result.response.docs[i]);
+      var article = $("<div>");
+      article.text(result.response.docs[i].headline.main);
+      articleDiv.append(article);
+
+
     }
   }).fail(function(err) {
     throw err;
