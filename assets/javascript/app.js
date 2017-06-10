@@ -20,8 +20,8 @@ var searchEndYear = '20170610'; //YYYYMMDD
 
 
 var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-url += '?9669e295a3e64ec6bcda97a5e33b6b39' + $.param({
-	'api-key': "9669e295a3e64ec6bcda97a5e33b6b39",
+url += '?' + my_key + $.param({
+	'api-key': my_key,
   'q': searchTerm,
   'begin_date': searchStartYear,
   'end_date': searchEndYear,
