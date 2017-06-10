@@ -33,7 +33,8 @@ $("#submit").on("click", function(event) {
     for (var i=0; i < Math.min(searchRecords, result.response.docs.length); i++){
       console.log(result.response.docs[i]);
       var article = $("<div>");
-      article.text(result.response.docs[i].headline.main);
+      article.append($("<p>").text(result.response.docs[i].headline.main));
+      article.append($("<p>").text(result.response.docs[i].byline.original));
       articleDiv.append(article);
 
 
