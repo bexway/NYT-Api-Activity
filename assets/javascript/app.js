@@ -17,7 +17,7 @@ $("#submit").on("click", function(event) {
 
   event.preventDefault();
   var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-  url += '?' + my_key + $.param({
+  url += '?' + $.param({
   	'api-key': my_key,
     'q': searchTerm,
     'begin_date': searchStartYear,
