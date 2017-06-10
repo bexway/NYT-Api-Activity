@@ -6,13 +6,13 @@
 $("#submit").on("click", function(event) {
   // store
   // search term
-  var searchTerm = 'basketball';
+  var searchTerm = $('.js-searchTerm')[0].value.trim();
   // seach records to Retrueve
   var searchRecords = 10;
   // Seach StartYear
-  var searchStartYear = '20170610'; //YYYYMMDD
+  var searchStartYear =  $('.js-searchStartYear')[0].value.trim(); //YYYYMMDD
   // Search EndYear
-  var searchEndYear = '20170610'; //YYYYMMDD
+  var searchEndYear =  $('.js-searchEndYear')[0].value.trim(); //YYYYMMDD
 
   event.preventDefault();
   var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
